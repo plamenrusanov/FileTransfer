@@ -1,0 +1,20 @@
+﻿@model FileInputModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<form method="post" asp-action="Index" enctype="multipart/form-data">
+    <div>
+        <label asp-for="File"/>
+        <input asp-for="File" type="file" class="form-control-file"/>
+
+    </div>
+    <div>
+        <input type="submit" value="Save"/>
+    </div>
+</form>
